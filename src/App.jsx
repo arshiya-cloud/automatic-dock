@@ -5,8 +5,8 @@ function App() {
     <div style={styles.container}>
       <h1 style={styles.heading}>Hello React 👋</h1>
       <p style={styles.text}>
-        This is your App.jsx file.  
-        Start editing and build from here.
+        This is your App.jsx file.   go !
+        Start editing and build from here. ready get set
       </p>
       <button style={styles.button} onClick={handleClick}>
         Click me
