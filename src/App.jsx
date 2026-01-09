@@ -1,35 +1,47 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+    <div style={styles.container}>
+      <h1 style={styles.heading}>Hello React 👋</h1>
+      <p style={styles.text}>
+        This is your App.jsx file.  
+        Start editing and build from here.
       </p>
-    </>
-  )
+      <button style={styles.button} onClick={handleClick}>
+        Click me
+      </button>
+    </div>
+  );
 }
 
-export default App
+function handleClick() {
+  alert("Button clicked!");
+}
+
+const styles = {
+  container: {
+    height: "100vh",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#f4f4f4",
+  },
+  heading: {
+    fontSize: "2.5rem",
+    marginBottom: "10px",
+  },
+  text: {
+    fontSize: "1rem",
+    marginBottom: "20px",
+    color: "#555",
+  },
+  button: {
+    padding: "10px 20px",
+    fontSize: "1rem",
+    cursor: "pointer",
+  },
+};
+
+export default App;
